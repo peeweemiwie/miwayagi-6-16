@@ -1,5 +1,5 @@
-# Gulp Starter for CSS Tricks Tutorial  
+# Miwa Yagi Redesign
 
-This repo is a gulp starter for this CSS Tricks tutorial. 
-
-Remember to do run the `npm install` command after cloning this repo :) 
+ `npm install` then `gulp`
+ 
+ `gulp build` for production.
