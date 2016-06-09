@@ -1,8 +1,4 @@
-$small: 768px;
-$large: 1024px;
-
-
-@media only screen and (min-device-width : $large){
+@media only screen and (min-device-width : $mq-large){
 
   .experience .work:nth-of-type(2) .title{
     margin: 0;
@@ -10,10 +6,14 @@ $large: 1024px;
 }
 
 
-@media only screen and (min-device-width : $small) and (max-device-width : $large){
+@media only screen and (min-device-width : $mq-small) and (max-device-width : $mq-large){
+
+  header[role=banner] {
+    height: $mq-s-header-height;
+   }
 
   .page {
-    // max-width: 100%;
+    padding-top: $mq-s-header-height;
   }
 
   .page > h2 {
@@ -48,134 +48,27 @@ $large: 1024px;
     z-index: 5;
   }
 
-}
-
-// @media (max-width: 767px) { 
-
-@media only screen and (max-device-width : $small){
-
-  header[role=banner] .job-title {
-    display: none;
+  .main-nav-list li a {
+    height: calc(100vh / 2 - #{$mq-s-header-height / 2});
   }
 
-  button.menu .material-icons {
-    color: #F00;
-    font-size: 4rem;
-    margin-top: 0.5rem;
+  .main-nav-list li:nth-of-type(1) a, 
+  .main-nav-list li:nth-of-type(2) a {
+    top: $mq-s-header-height;
   }
 
-  .page-wrapper {
-    overflow: hidden;
-    width: 100vw;
+  .main-nav-list li:nth-of-type(3) a, 
+  .main-nav-list li:nth-of-type(4) a {
+    top: calc(100vh / 2 + #{$mq-s-header-height / 2});
   }
 
-  .page {
-    min-height: calc(100vh - 7rem);
-    max-width: 100%;
-    width: 100%;
+  button.menu {
+    top: calc(#{$mq-s-header-height - 7rem} / 2)
   }
 
-  .col {
-    float: none;
-    margin: 0 1%;
-    width: 96%;
-  } 
-
-  .experience .section-title {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .experience .section-title .time{
-    display: flex;
-    align-items: center;
-  }
-
-  .experience .section-title h4 {
-    display: block;
-    padding-top: .5rem;
-  }
-
-  .experience .section-title .company {
-    display: inline;
-  }
-
-  .experience .section-title .time.start {
-    float: right;
-  }
-
-  .experience .section-title .time.end {
-    float: left;
-  }
-
-  .photo-frame {
-    padding: 1rem;
-  }
-
-  .bubble-wrapper {
-    display: none;
-  }
-
-  .page > h2 {
-    font-size: 5rem;
-  }
-
-  .photo-frame,
-  .image-container > div {
-    width: 96%;
-  }
-
-// nav
-
-  .main-nav-list a{
-    align-items: center;
-    animation: none !important;
-    background-color: $bg-color-1;
-    border-width: 0 0 1px 0;
-    color: $white;
-    display: inline-flex;
-    font-family: 'Poppins', sans-serif;
-    font-size: 5rem;
-    font-weight: 100;
-    height: calc((100vh - 7rem) / 4 );
-    justify-content: flex-start;
-    padding-left: 10%;
-    position: fixed;
-    text-decoration: none;
-    text-shadow: 0 0 0 transparent;
-    transition: left .5s;
-    width: 100vw;
-    z-index: 30; 
-  }
-
-
-  .main-nav-list a:focus, 
-  .main-nav-list a:hover {
-    color: #fff;
-    font-size: 5rem;
-    text-shadow: none;
-  }
-
-
-  [data-nav=show] .main-nav-list li:nth-of-type(even) a {
-    left: 0;
-  }
-
-  [data-nav=hide] .main-nav-list li:nth-of-type(odd) a {
-    left: -100%;
-  }
-
-  [data-nav=hide] .main-nav-list li:nth-of-type(even) a {
-    left: 100%;
-  }
-
-  @for $i from 1 through 4 {
-    .main-nav-list li:nth-of-type(#{$i}) a {
-      border-bottom:2px solid rgba($red, .9);
-      border-left: 0;
-      border-right: 0;
-      border-top: 0;
-      top: calc(((100vh - 7rem) / 4) * (#{$i} - 1) + 7rem);
-    }
+  button.menu i {
+    font-size: 7rem;
   }
 }
+
+

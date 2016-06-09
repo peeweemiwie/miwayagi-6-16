@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixin";
 
 @import "base";
 @import "icon";
@@ -13,3 +14,4 @@
 @import "styleguide";
 @import "animation-keyframes";
 @import "media-queries";
+@import "mq-small";

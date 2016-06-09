@@ -18,8 +18,16 @@ $bg-color-1: rgba(64,64,64,1);
 $bg-color-09: rgba(64,64,64,.9);
 $bg-color-0: rgba(64,64,64,0);
 
-
 $header-height: 7rem;
+
+// ====================== 
+// media queries
+// ======================
+$mq-small: 767px;
+$mq-large: 1024px;
+
+$mq-s-header-height: 12rem;
+$mq-s-font-size: 2.4rem;
 
 
 

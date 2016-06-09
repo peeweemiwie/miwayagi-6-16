@@ -12,20 +12,19 @@
     z-index: 100;
   }
 
-  button.menu:hover,
-  button.menu:focus {
-    outline: none;
+  button.menu i {
+    font-size: 5rem;
   }
-
+  
+  [data-nav='show'] button.menu i,
   button.menu i {
     color: $gray-80;
-    font-size: 5rem;
     transform: rotate(0);
     transition: color .3s, transform .3s;
   }  
 
-  button.menu:hover i,
-  button.menu:focus i {
+  [data-nav='hide'] button.menu i,
+  button.menu:hover i {
     color: $red;
     transform: rotate(90deg);
     transition: color .3s, transform .3s;

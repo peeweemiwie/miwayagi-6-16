@@ -1,0 +1,199 @@
+@media only screen and (max-device-width : $mq-small){
+
+  html {
+    font-size: 100%;
+  }
+
+  header[role=banner] {
+    height: $mq-s-header-height;
+  }
+
+  header[role=banner] .job-title {
+    display: none;
+  }
+  
+  button.menu {
+    top: 1rem;
+  }
+
+  button.menu i {
+    font-size: 8rem;
+    margin-top: 0.5rem;
+  }
+
+  h3 {
+    margin: 5rem 0;
+  }
+
+  .page-wrapper {
+    overflow: hidden;
+    width: 100vw;
+  }
+
+  .page {
+    margin-bottom: 0;
+    max-width: 100%;
+    min-height: calc(100vh - #{$mq-s-header-height});
+    padding-top: $mq-s-header-height;
+    width: 100%;
+  }
+
+  .page > h2 {
+    font-size: 6rem;
+    margin-bottom: 0;
+    background-clip: none;
+    -webkit-background-clip: none;
+    -moz-background-clip: none;
+    background: $aqua;
+    color: #FFF;
+  }
+
+  .col {
+    float: none;
+    margin: 0 3%;
+    width: 94%;
+  } 
+
+  .section-title {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .section-title .bubble {
+    font-size: 2.4rem;
+  }
+
+  .section-title .bubble.icon {
+    border-radius: 12px;
+    width: 4rem;
+  }
+
+  .section-title h4 {
+    display: block;
+    font-size: 2.8rem;
+  }
+
+
+// ====================== 
+// experience
+// ======================
+
+  .experience .section-title .time{
+    display: flex;
+    align-items: center;
+  }
+
+  .experience .section-title .company {
+    display: inline;
+  }
+
+  .experience .section-title .time.start {
+    float: right;
+  }
+
+  .experience .section-title .time.end {
+    float: left;
+  }
+
+  .experience .keyword,
+  .link span,
+  .photo-frame p  {
+    font-size: $mq-s-font-size;
+  }
+
+  .bubble-wrapper {
+    display: none;
+  }
+
+  .photo-frame,
+  .image-container > div {
+    width: 96%;
+  }
+
+  .image-container > div {
+    padding-bottom: 60%;
+  }
+
+  .photo-frame {
+    border: 1px solid $gray-80;
+    padding: 1rem 1rem 108% 1rem;
+  }
+
+  .photo-frame p {
+    margin: 1rem 0 0;
+  }
+
+// ====================== 
+// contact
+// ======================
+
+  .contact .wrapper .col {
+    background: rgba(0, 0, 0, 0);
+    border-radius: 0;
+    left: auto;
+    margin: 0;
+    padding: 4rem 1rem;
+    position: static;
+    text-align: left;
+    top: auto;
+    transform: none;
+    z-index: 5;
+  }
+
+// ====================== 
+// nav
+// ======================
+
+  .main-nav-list a{
+    align-items: center;
+    animation: none !important;
+    background-color: $bg-color-1;
+    color: $white;
+    display: inline-flex;
+    font-family: 'Poppins', sans-serif;
+    font-size: 5rem;
+    font-weight: 100;
+    height: calc((100vh - 12rem) / 4 );
+    justify-content: flex-start;
+    padding-left: 10%;
+    position: fixed;
+    text-decoration: none;
+    text-shadow: 0 0 0 transparent;
+    transition: transform .5s;
+    width: 100vw;
+    z-index: 30; 
+  }
+
+  .main-nav-list a:focus, 
+  .main-nav-list a:hover {
+    color: #fff;
+    font-size: 5rem;
+    text-shadow: none;
+  }
+
+  [data-nav=show] .main-nav-list li:nth-of-type(even) a {
+    // left: 0;
+    transform: translate3d(0, 0, 0);
+  }
+
+  [data-nav=hide] .main-nav-list li:nth-of-type(odd) a {
+    // left: -100%;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  [data-nav=hide] .main-nav-list li:nth-of-type(even) a {
+    // left: 100%;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  @for $i from 1 through 4 {
+    .main-nav-list li:nth-of-type(#{$i}) a {
+      border-bottom:2px solid rgba($red, .9);
+      border-left: 0;
+      border-right: 0;
+      border-top: 0;
+      top: calc(((100vh - #{$mq-s-header-height}) / 4) * (#{$i} - 1) + #{$mq-s-header-height});
+    }
+  }
+}
