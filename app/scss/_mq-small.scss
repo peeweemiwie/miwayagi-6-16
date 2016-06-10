@@ -13,6 +13,7 @@
   }
   
   button.menu {
+    left: 2rem;
     top: 1rem;
   }
 
@@ -22,6 +23,7 @@
   }
 
   h3 {
+    font-size: 6rem;
     margin: 5rem 0;
   }
 
@@ -33,7 +35,8 @@
   .page {
     margin-bottom: 0;
     max-width: 100%;
-    min-height: calc(100vh - #{$mq-s-header-height});
+    // min-height: calc(100vh - #{$mq-s-header-height});
+    min-height: 100vh;
     padding-top: $mq-s-header-height;
     width: 100%;
   }
@@ -54,24 +57,31 @@
     width: 94%;
   } 
 
-  .section-title {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
+  .container p, 
+  .container li {
+    font-size: 2rem;
   }
 
   .section-title .bubble {
     font-size: 2.4rem;
+    padding: .5rem 1rem;
   }
 
   .section-title .bubble.icon {
     border-radius: 12px;
-    width: 4rem;
+    height: auto;
+    margin-right: 1rem;
+    width: auto;
+  }
+
+  .section-title .bubble.icon .material-icons {
+    font-size: 60px;
   }
 
   .section-title h4 {
+    font-size: 3rem;
     display: block;
-    font-size: 2.8rem;
+    margin: 1rem;
   }
 
 
@@ -79,13 +89,19 @@
 // experience
 // ======================
 
+  .experience .section-title {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
   .experience .section-title .time{
     display: flex;
     align-items: center;
   }
 
   .experience .section-title .company {
-    display: inline;
+    display: block;
   }
 
   .experience .section-title .time.start {
@@ -124,6 +140,38 @@
     margin: 1rem 0 0;
   }
 
+  .portfolio .section-title h4 {
+    align-items: center;
+    display: flex;
+  }
+  
+  .portfolio .section-title .bubble.icon {
+    margin-right: 2rem;
+  }
+
+  .portfolio .image-container div {
+    border-color: $text;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .portfolio .image-container div p {
+    border-radius: 0;
+    bottom: 0;
+    color: $white;
+    font-size: 2.7rem;
+    left: 0;
+    margin: 0;
+    opacity: 1;
+    position: absolute;
+    transform: scale(1, 1);
+    transition: none;
+    z-index: 5;
+    background-color: rgba($gray-80, .8);
+  }
+
 // ====================== 
 // contact
 // ======================
@@ -156,7 +204,7 @@
     font-weight: 100;
     height: calc((100vh - 12rem) / 4 );
     justify-content: flex-start;
-    padding-left: 10%;
+    padding-left: 4rem;
     position: fixed;
     text-decoration: none;
     text-shadow: 0 0 0 transparent;
@@ -173,17 +221,14 @@
   }
 
   [data-nav=show] .main-nav-list li:nth-of-type(even) a {
-    // left: 0;
     transform: translate3d(0, 0, 0);
   }
 
   [data-nav=hide] .main-nav-list li:nth-of-type(odd) a {
-    // left: -100%;
     transform: translate3d(-100%, 0, 0);
   }
 
   [data-nav=hide] .main-nav-list li:nth-of-type(even) a {
-    // left: 100%;
     transform: translate3d(100%, 0, 0);
   }
 

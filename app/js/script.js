@@ -3,11 +3,17 @@
   'use strict';
 
   var body = $('body');
+  var mainNav = $('.main-nav');
+
 
   $('button.menu, .main-nav-list, .headers').on('click', function(){
-    body.attr('data-nav') === 'show' ? 
-    body.attr('data-nav', 'hide') : 
-    body.attr('data-nav', 'show');
+    // body.attr('data-nav') === 'show' ? 
+    // body.attr('data-nav', 'hide') : 
+    // body.attr('data-nav', 'show');
+    mainNav.attr('data-nav') === 'show' ? 
+    mainNav.attr('data-nav', 'hide') : 
+    mainNav.attr('data-nav', 'show');
+
   });
 
   var makeBubble = function(num){

@@ -95,13 +95,19 @@ app.controller('mainController', ['$scope', function($scope) {
     ];
 
 
-    $scope.portfolioLinks = [{
-      'site': 'github',
+    $scope.portfolioLinks = [
+    {
+      'site': 'Github',
+      'url': 'github.com/peeweemiwie/miwayagi-6-16',
+      'imgSrc': 'logo.svg',
+      'title': 'This site\'s repository'
+    },{
+      'site': 'Github',
       'url': 'github.com/peeweemiwie',
       'imgSrc': 'p-octocat.png',
       'title': 'Repositories and code snippets'
     },{
-      'site': 'codepen',
+      'site': 'Codepen',
       'url': 'codepen.io/peeweemiwie/pens/public/',
       'imgSrc': 'logo-codepen.svg',
       'title': 'CSS drawing and animation'

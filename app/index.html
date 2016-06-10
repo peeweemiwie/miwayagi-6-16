@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/style.css">
   <!--endbuild-->
 </head>
-<body ng-app='portfolio' data-nav='show'>
+<body ng-app='portfolio'>
 
   <header role="banner">
     <a href="#" class="headers">
@@ -25,7 +25,7 @@
 
   <div class="page-wrapper" ng-controller="mainController">
     <section class="content">
-      <nav role="navigation" class="main-nav">
+      <nav role="navigation" class="main-nav" data-nav='show'>
         <button class="menu" title="Navigation links"><i class="material-icons">list</i></button>
         
         <ul class="main-nav-list">
@@ -109,7 +109,7 @@ portfolio page
           <div class="container">
             <div class="section-title">
               <h4>
-                <span class="bubble icon start"><i class="material-icons">&#xE30B;</i></span> github and codepen
+                <span class="bubble icon start"><i class="material-icons">&#xE30B;</i></span> Code Snippets
               </h4>
             </div>
 
@@ -124,10 +124,11 @@ portfolio page
             <p>One of my favorite things is to code creatively. Here are some example of CSS and JS drawing and animation.</p>
 
             <p><a href="http://codepen.io/peeweemiwie/pens/public/" class="codepen link" target="_blank"><img src="images/logo-codepen.svg" alt="codepen icon" class="link-icon" title="A link to Miwa's codepen."  target="_blank"><span>View more on Codepen</span></a></p>
+          </div>
 
-
-            <p ng-repeat="info in codepen" data-height="{{ info.height }}" data-theme-id="19622" data-slug-hash="{{ info.slugHash }}" data-default-tab="result" data-user="peeweemiwie" data-preview="{{ info.preview }}" class='codepen'>See the Pen <a href='http://codepen.io/peeweemiwie/pen/{{ info.slugHash }}/'>{{  codepen.title }}</a> by Miwa Yagi (<a href='http://codepen.io/peeweemiwie'>@peeweemiwie</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-          </div>   
+          <div ng-repeat="info in codepen" class="container">
+            <p  data-height="{{ info.height }}" data-theme-id="19622" data-slug-hash="{{ info.slugHash }}" data-default-tab="result" data-user="peeweemiwie" data-preview="{{ info.preview }}" class='codepen'>See the Pen <a href='http://codepen.io/peeweemiwie/pen/{{ info.slugHash }}/'>{{  codepen.title }}</a> by Miwa Yagi (<a href='http://codepen.io/peeweemiwie'>@peeweemiwie</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+          </div>     
         </div> 
 
         <div class="col">
