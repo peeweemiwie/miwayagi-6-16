@@ -71,11 +71,11 @@ app.controller('mainController', ['$scope', function($scope) {
     $scope.education = [{
         'course': 'Certificate in Web Development',
         'school': 'New York University',
-        'subjects': 'JavaScript, Information Architecture, HTML5'
+        'subjects': ['JavaScript', 'Information Architecture', 'HTML5']
     }, {
         'course': 'Certificate in Web Digital Design',
         'school': 'Baruch College',
-        'subjects': 'Illustrator, Photoshop, InDesign, Dreamweaver, Flash Animation, ActionScript 2, Fireworks,HTML, CSS, JavaScript'
+        'subjects': ['Illustrator', 'Photoshop', 'InDesign', 'Dreamweaver', 'Flash Animation', 'ActionScript 2', 'Fireworks', 'HTML', 'CSS', 'JavaScript']
     }];
 
     $scope.portfolio = [
