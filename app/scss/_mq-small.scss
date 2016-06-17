@@ -180,13 +180,26 @@
     background: rgba(0, 0, 0, 0);
     border-radius: 0;
     left: auto;
-    margin: 0;
+    margin: 0 3%;
     padding: 4rem 1rem;
     position: static;
     text-align: left;
     top: auto;
     transform: none;
     z-index: 5;
+  }
+
+  .contact .wrapper .link {
+    background: none;
+    padding-left: 0;
+  }
+
+  .contact .col > p:first-of-type {
+    background-image: url(../images/logo-linkedin.png);
+    background-position-x: 1rem;
+    background-repeat: no-repeat;
+    background-size: 7rem;
+    padding-top: 10rem;
   }
 
 // ====================== 

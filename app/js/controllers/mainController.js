@@ -108,17 +108,12 @@ app.controller('mainController', ['$scope', function($scope) {
       'title': 'Repositories and code snippets'
     },{
       'site': 'Codepen',
-      'url': 'codepen.io/peeweemiwie/pens/public/',
+      'url': 'codepen.io/peeweemiwie/',
       'imgSrc': 'logo-codepen.svg',
       'title': 'CSS drawing and animation'
     }];
 
     $scope.codepen = [{
-      'height': 369,
-      'slugHash': 'OyEXGj',
-      'preview': false,
-      'title': 'Canvas drawing'
-    },{
       'height': 445,
       'slugHash': 'YyvWmG',
       'preview': true,
@@ -128,6 +123,16 @@ app.controller('mainController', ['$scope', function($scope) {
       'slugHash': 'JXWrdR',
       'preview': false,
       'title': 'SASS drawing'
+    },{
+      'height': 300,
+      'slugHash': 'MejYNB',
+      'preview': true,
+      'title': 'triangle animation'
+    },{
+      'height': 369,
+      'slugHash': 'OyEXGj',
+      'preview': false,
+      'title': 'Canvas drawing'
     }];
 
     $scope.photoGallery = [
