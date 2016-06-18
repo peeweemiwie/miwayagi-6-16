@@ -114,8 +114,8 @@ app.controller('mainController', ['$scope', function($scope) {
     }];
 
     $scope.codepen = [{
-      'height': 445,
-      'slugHash': 'YyvWmG',
+      'height': 350,
+      'slugHash': 'NrrEMW',
       'preview': true,
       'title': 'CSS-animation dice'
     },{
@@ -129,10 +129,20 @@ app.controller('mainController', ['$scope', function($scope) {
       'preview': true,
       'title': 'triangle animation'
     },{
-      'height': 369,
-      'slugHash': 'OyEXGj',
+      'height': 300,
+      'slugHash': 'wKXWKz',
       'preview': false,
-      'title': 'Canvas drawing'
+      'title': 'css-animation: page expand'
+    },{
+      'height': 300,
+      'slugHash': 'QjxEyv',
+      'preview': false,
+      'title': 'css-animation: page minimize'
+    },{
+      'height': 300,
+      'slugHash': 'EygVWZ',
+      'preview': false,
+      'title': 'css-animation: page flip'
     }];
 
     $scope.photoGallery = [
