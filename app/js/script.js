@@ -31,23 +31,20 @@
         mainNavButton = $('nav.main-nav button'),
         mainNavAnchor = $('.main-nav-list a'),
         mainNavAnchorArray = [],
-        lastSegUlr = currHref.substr(currHref.lastIndexOf('/') + 1);
+        lastSegUlr = currHref.substr(currHref.lastIndexOf('/') + 1),
+        lastSegUlrAnchor = lastSegUlr.split('#')[1];
 
     for(var i=0; i<mainNavAnchor.length; i++){
       mainNavAnchorArray.push(mainNavAnchor[i].text);
     }
 
     // if nav link name (ie: #bio) is in current url, hide nav
-    if(mainNavAnchorArray.indexOf(lastSegUlr.substr(1)) > -1){
+    if(mainNavAnchorArray.indexOf(lastSegUlrAnchor) > -1){
       changeDataState(mainNav, dataNav, 'hide');
     }
 
     mainNavAnchor.on('click', function(){
       changeDataState(mainNav, dataNav, 'hide');
-    });
-
-    mainNavButton.on('click', function(){
-      window.location.assign('#');
     });
   });
 
